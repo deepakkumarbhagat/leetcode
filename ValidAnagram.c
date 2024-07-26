@@ -1,8 +1,11 @@
 #define max_ascii_chars 256
 
 bool isAnagram(char* s, char* t) {
-
     int ascii[max_ascii_chars] = {0};
+
+    if (strlen(s) != strlen(t)) {
+        return false;
+    }
 
     while (*s != '\0') {
         ascii[*s] += 1;
